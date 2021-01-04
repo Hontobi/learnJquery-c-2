@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>How to install</title>
+    <script src="jquery-3.5.1.js"></script>
+  </head>
+  <body>
+    <ul id='list'>
+        <li class="dummy">リスト01</li>
+        <li class="dummy">リスト02</li>
+        <li class="dummy">リスト03</li>
+    </ul>
+  
+ 
+    <script>
+        var list = document.getElementById('list');
+        var len = list.getElementsByTagName('li').length;
+        var item;
+        for(var i=0; i<len; i++){
+            item = list.getElementsByTagName('li')[i];
+            item.style.color = 'red';
+        };
+        $(function(){
+            var target = $('#list li');
+            target.removeClass('dummy');
+            target.addClass('item');
+            target.css('color', 'blue');
+        })
+        
+        
+    
+    </script>
+  </body>
+</html>
