@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <style>
+        .hidden{display:none;}
+        .visible{display:visible;}
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <title>chapter2 section2</title>
+        <script src="jquery-3.5.1.js"></script>
+    </head>
+    <body>
+      <ul id='list'>
+          <li><input type="text" value="初期値" class="hidden"></li>
+          <li><input type="text" value="初期値" class="visible"></li>
+      </ul>
+      <div><span>子要素にspan要素を持つdiv要素です。</span></div>
+      <div><p>子要素にp要素を持つdiv要素です。</p></div>
+        
+        <script>
+            $(function(){
+                $('input:visible').val("値を変更しました")
+            });
+        </script>
+    </body>
+</html>
